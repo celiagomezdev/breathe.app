@@ -1,1 +1,662 @@
-[]
+[
+  {
+    "name": "Hopfenreich",
+    "neighbourhood": "Kreuzberg",
+    "address": "Sorauer Str. 31, Berlin",
+    "postalCode": "10997",
+    "latitude": 52.4995608,
+    "longitude": 13.4392927,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Bateau Ivre",
+    "neighbourhood": "Kreuzberg",
+    "address": "Oranienstraße 18, Berlin",
+    "postalCode": "10999",
+    "latitude": 52.5004782,
+    "longitude": 13.4226767,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "MUTED HORN",
+    "neighbourhood": "Neukölln",
+    "address": "Flughafenstraße 49, Berlin",
+    "postalCode": "12053",
+    "latitude": 52.48119,
+    "longitude": 13.42777,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Roter Salon",
+    "neighbourhood": "Mitte",
+    "address": "Rosa-Luxemburg-Platz, Berlin",
+    "postalCode": "10178",
+    "latitude": 52.5271099,
+    "longitude": 13.4115814,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Kaduka",
+    "neighbourhood": "Neukölln",
+    "address": "Weserstraße 207, Berlin",
+    "postalCode": "12047",
+    "latitude": 52.48421,
+    "longitude": 13.43734,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Sway",
+    "neighbourhood": "Neukölln",
+    "address": "Pannierstraße 29, Berlin",
+    "postalCode": "12047",
+    "latitude": 52.48705,
+    "longitude": 13.43282,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Kauz & Kiebitz",
+    "neighbourhood": "Neukölln",
+    "address": "Reuterstraße 47, Berlin",
+    "postalCode": "12047",
+    "latitude": 52.48784,
+    "longitude": 13.43574,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Myxa",
+    "neighbourhood": "Neukölln",
+    "address": "Lenaustraße 22, Berlin",
+    "postalCode": "12047",
+    "latitude": 52.490273,
+    "longitude": 13.426709,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Göttin der Weisheit",
+    "neighbourhood": "Neukölln",
+    "address": "Lenaustraße 5, Berlin",
+    "postalCode": "12047",
+    "latitude": 52.48911,
+    "longitude": 13.42488,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Prachtwerk",
+    "neighbourhood": "Neukölln",
+    "address": "Ganghoferstraße 2, Berlin",
+    "postalCode": "12043",
+    "latitude": 52.4790558,
+    "longitude": 13.4387362,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Wolf Kino",
+    "neighbourhood": "Neukölln",
+    "address": "Weserstraße 59, Berlin",
+    "postalCode": "12045",
+    "latitude": 52.48271,
+    "longitude": 13.44193,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Lager Lager",
+    "neighbourhood": "Neukölln",
+    "address": "Pflügerstraße 68, Berlin",
+    "postalCode": "12047",
+    "latitude": 52.4915249,
+    "longitude": 13.4285976,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Möve im Felsenkeller",
+    "neighbourhood": "Schöneberg",
+    "address": "Akazienstraße 2, Berlin",
+    "postalCode": "10823",
+    "latitude": 52.4865011,
+    "longitude": 13.3557583,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "OFFSIDE Pub & Whisky Bar",
+    "neighbourhood": "Wedding",
+    "address": "Jülicher Str. 4, Berlin",
+    "postalCode": "13357",
+    "latitude": 52.553383,
+    "longitude": 13.39163,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Vagabund Brauerei",
+    "neighbourhood": "Wedding",
+    "address": "Antwerpener Str. 3, Berlin",
+    "postalCode": "13353",
+    "latitude": 52.5479277,
+    "longitude": 13.3493062,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Café Pförtner",
+    "neighbourhood": "Wedding",
+    "address": "Uferstraße 8-11, Berlin",
+    "postalCode": "13357",
+    "latitude": 52.551837,
+    "longitude": 13.3743701,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Mano",
+    "neighbourhood": "Kreuzberg",
+    "address": "Skalitzer Str. 46A, Berlin",
+    "postalCode": "10997",
+    "latitude": 52.4989743,
+    "longitude": 13.4306216,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Ä",
+    "neighbourhood": "Neukölln",
+    "address": "Weserstraße 40, Berlin",
+    "postalCode": "12045",
+    "latitude": 52.4851,
+    "longitude": 13.43692,
+    "smokingType": "sepnonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Frollein Langner",
+    "neighbourhood": "Neukölln",
+    "address": "Weisestraße 34, Berlin",
+    "postalCode": "12049",
+    "latitude": 52.4739501,
+    "longitude": 13.4251841,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Protokoll Taproom",
+    "neighbourhood": "Friedrichshain",
+    "address": "Boxhagener Str. 110, Berlin",
+    "postalCode": "10245",
+    "latitude": 52.51268,
+    "longitude": 13.45932,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Kantine am Berghain",
+    "neighbourhood": "Friedrichshain",
+    "address": "Am Wriezener Bahnhof, Berlin",
+    "postalCode": "10243",
+    "latitude": 52.511471,
+    "longitude": 13.442406,
+    "smokingType": "sepnonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Dachkammer",
+    "neighbourhood": "Friedrichshain",
+    "address": "Simon-Dach-Straße 39, Berlin",
+    "postalCode": "10245",
+    "latitude": 52.511108,
+    "longitude": 13.4569719,
+    "smokingType": "sepnonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Tristeza",
+    "neighbourhood": "Neukölln",
+    "address": "Pannierstr. 5, Berlin",
+    "postalCode": "12047",
+    "latitude": 52.4864952,
+    "longitude": 13.4308569,
+    "smokingType": "sepnonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Villa Neukölln",
+    "neighbourhood": "Neukölln",
+    "address": "Hermannstraße 214-216, Berlin",
+    "postalCode": "12049",
+    "latitude": 52.4785136,
+    "longitude": 13.4270529,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Hops & Barley",
+    "neighbourhood": "Friedrichshain",
+    "address": "Wühlischstraße 22/23, Berlin",
+    "postalCode": "10245",
+    "latitude": 52.508998,
+    "longitude": 13.460597,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Fargo",
+    "neighbourhood": "Friedrichshain",
+    "address": "Grünberger Str. 77, Berlin",
+    "postalCode": "10245",
+    "latitude": 52.51139,
+    "longitude": 13.4600679,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Südblock",
+    "neighbourhood": "Kreuzberg",
+    "address": "Admiralstraße 1-2, Berlin",
+    "postalCode": "10999",
+    "latitude": 52.4986228,
+    "longitude": 13.4169004,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Café Luzia",
+    "neighbourhood": "Kreuzberg",
+    "address": "Oranienstraße 34, Berlin",
+    "postalCode": "10999",
+    "latitude": 52.5016784,
+    "longitude": 13.4182857,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "SOLAR Sky Lounge",
+    "neighbourhood": "Kreuzberg",
+    "address": "Stresemannstraße 76, Berlin",
+    "postalCode": "10963",
+    "latitude": 52.504308,
+    "longitude": 13.383744,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Tante Emma",
+    "neighbourhood": "Kreuzberg",
+    "address": "Köpenicker Str. 1, Berlin",
+    "postalCode": "10997",
+    "latitude": 52.5014153,
+    "longitude": 13.4417255,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Yorckschlösschen",
+    "neighbourhood": "Kreuzberg",
+    "address": "Yorckstraße 15, Berlin",
+    "postalCode": "10965",
+    "latitude": 52.493631,
+    "longitude": 13.382237,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Hannibal",
+    "neighbourhood": "Kreuzberg",
+    "address": "Wiener Straße 69, Berlin",
+    "postalCode": "10999",
+    "latitude": 52.4991129,
+    "longitude": 13.42818,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "My house at the lake",
+    "neighbourhood": "Mitte",
+    "address": "Brunnenstraße 197-198, Berlin",
+    "postalCode": "10119",
+    "latitude": 52.5299737,
+    "longitude": 13.4007379,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Kindl Stuben",
+    "neighbourhood": "Neukölln",
+    "address": "Sonnenallee 92, Berlin",
+    "postalCode": "12045",
+    "latitude": 52.4824503,
+    "longitude": 13.437988,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "K-Fetisch",
+    "neighbourhood": "Neukölln",
+    "address": "Wildenbruchstraße 86, Berlin",
+    "postalCode": "12045",
+    "latitude": 52.4830722,
+    "longitude": 13.4417665,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Keith",
+    "neighbourhood": "Neukölln",
+    "address": "Schillerpromenade 2, Berlin",
+    "postalCode": "12049",
+    "latitude": 52.4782269,
+    "longitude": 13.4213323,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Ungeheuer",
+    "neighbourhood": "Neukölln",
+    "address": "Emser Str. 23, Berlin",
+    "postalCode": "12051",
+    "latitude": 52.469127,
+    "longitude": 13.434697,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Laika",
+    "neighbourhood": "Neukölln",
+    "address": "Emser Str. 131, Berlin",
+    "postalCode": "12051",
+    "latitude": 52.4692679,
+    "longitude": 13.4380257,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Wohnzimmer",
+    "neighbourhood": "Prenzlauer Berg",
+    "address": "Lettestraße 6, Berlin",
+    "postalCode": "10437",
+    "latitude": 52.5434934,
+    "longitude": 13.4191829,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "KASCHK by BRLO",
+    "neighbourhood": "Mitte",
+    "address": "Linienstraße 40, Berlin",
+    "postalCode": "10119",
+    "latitude": 52.52922,
+    "longitude": 13.40444,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Mikkeller Berlin",
+    "neighbourhood": "Mitte",
+    "address": "Torstraße 102, Berlin",
+    "postalCode": "10119",
+    "latitude": 52.52912,
+    "longitude": 13.39763,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Birra - Italian Craft Beer",
+    "neighbourhood": "Prenzlauer Berg",
+    "address": "Prenzlauer Allee 198, Berlin",
+    "postalCode": "10405",
+    "latitude": 52.54144,
+    "longitude": 13.42431,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "BARDAF",
+    "neighbourhood": "Alt-Treptow",
+    "address": "Bouchéstraße 15, Berlin",
+    "postalCode": "12435",
+    "latitude": 52.49392,
+    "longitude": 13.44682,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "BRLO Brwhouse",
+    "neighbourhood": "Kreuzberg",
+    "address": "Schöneberger Str. 16, Berlin",
+    "postalCode": "10963",
+    "latitude": 52.50085,
+    "longitude": 13.37418,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "The Castle",
+    "neighbourhood": "Mitte",
+    "address": "Invalidenstraße 129, Berlin",
+    "postalCode": "10115",
+    "latitude": 52.53177,
+    "longitude": 13.38792,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Bergschloss",
+    "neighbourhood": "Neukölln",
+    "address": "Kopfstraße 59, Berlin",
+    "postalCode": "12053",
+    "latitude": 52.47648,
+    "longitude": 13.43265,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "BrewDog Berlin Mitte",
+    "neighbourhood": "Mitte",
+    "address": "Ackerstraße 29, Berlin",
+    "postalCode": "10115",
+    "latitude": 52.53232,
+    "longitude": 13.39784,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Bellboy Berlin",
+    "neighbourhood": "Mitte",
+    "address": "Anton-Wilhelm-Amo-Straße 30, Berlin",
+    "postalCode": "10117",
+    "latitude": 52.5121321,
+    "longitude": 13.3932376,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Beavis Bar",
+    "neighbourhood": "Mitte",
+    "address": "Veteranenstraße 11, Berlin",
+    "postalCode": "10119",
+    "latitude": 52.5331417,
+    "longitude": 13.4018075,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "FABELEI Cocktailbar",
+    "neighbourhood": "Schöneberg",
+    "address": "Kyffhäuserstraße 21, Berlin",
+    "postalCode": "10781",
+    "latitude": 52.4935533,
+    "longitude": 13.3520538,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "BRYK Bar",
+    "neighbourhood": "Prenzlauer Berg",
+    "address": "Sredzkistraße 65, Berlin",
+    "postalCode": "10405",
+    "latitude": 52.5375418,
+    "longitude": 13.4224078,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Wax On",
+    "neighbourhood": "Neukölln",
+    "address": "Weserstraße 208, Berlin",
+    "postalCode": "12047",
+    "latitude": 52.4882367,
+    "longitude": 13.4296602,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "ORA",
+    "neighbourhood": "Kreuzberg",
+    "address": "Oranienplatz 14, Berlin",
+    "postalCode": "10999",
+    "latitude": 52.5013709,
+    "longitude": 13.416078,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Bar Milano",
+    "neighbourhood": "Mitte",
+    "address": "Brunnenstraße 11, Berlin",
+    "postalCode": "10119",
+    "latitude": 52.5314138,
+    "longitude": 13.4004488,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Bar Clara",
+    "neighbourhood": "Mitte",
+    "address": "Oranienburger Straße 54, Berlin",
+    "postalCode": "10117",
+    "latitude": 52.5256724,
+    "longitude": 13.3891203,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Monkey Bar",
+    "neighbourhood": "Charlottenburg",
+    "address": "Budapester Straße 40, Berlin",
+    "postalCode": "10787",
+    "latitude": 52.5056319,
+    "longitude": 13.3378992,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "The Gin Room",
+    "neighbourhood": "Wilmersdorf",
+    "address": "Pariser Straße 38, Berlin",
+    "postalCode": "10707",
+    "latitude": 52.4983042,
+    "longitude": 13.3175152,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Mausi",
+    "neighbourhood": "Neukölln",
+    "address": "Richardplatz 1, Berlin",
+    "postalCode": "12055",
+    "latitude": 52.4746789,
+    "longitude": 13.446639,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Bar Nonno",
+    "neighbourhood": "Schöneberg",
+    "address": "Akazienstraße 7A, Berlin",
+    "postalCode": "10823",
+    "latitude": 52.4877313,
+    "longitude": 13.3546717,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "KINK Bar & Restaurant",
+    "neighbourhood": "Prenzlauer Berg",
+    "address": "Schönhauser Allee 176, Berlin",
+    "postalCode": "10119",
+    "latitude": 52.531982,
+    "longitude": 13.4117657,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Kilkenny Irish Pub",
+    "neighbourhood": "Mitte",
+    "address": "Am Zwirngraben 17-20, Berlin",
+    "postalCode": "10178",
+    "latitude": 52.5224444,
+    "longitude": 13.4015612,
+    "smokingType": "nonsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Lamm Bar",
+    "neighbourhood": "Pankow",
+    "address": "Wisbyer Straße 1, Berlin",
+    "postalCode": "10439",
+    "latitude": 52.5533928,
+    "longitude": 13.4150124,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Basalt Bar",
+    "neighbourhood": "Wedding",
+    "address": "Utrechter Straße 38, Berlin",
+    "postalCode": "13347",
+    "latitude": 52.5506938,
+    "longitude": 13.3607102,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Nathanja & Heinrich",
+    "neighbourhood": "Neukölln",
+    "address": "Weichselstraße 44, Berlin",
+    "postalCode": "12045",
+    "latitude": 52.4873646,
+    "longitude": 13.4368429,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Macondo",
+    "neighbourhood": "Friedrichshain",
+    "address": "Gärtnerstraße 14, Berlin",
+    "postalCode": "10245",
+    "latitude": 52.5107813,
+    "longitude": 13.4610674,
+    "smokingType": "sepsmo",
+    "status": "approved"
+  },
+  {
+    "name": "Volksbar",
+    "neighbourhood": "Mitte",
+    "address": "Rosa-Luxemburg-Straße 39-41, Berlin",
+    "postalCode": "10178",
+    "latitude": 52.5266687,
+    "longitude": 13.4106754,
+    "smokingType": "sepnonsmo",
+    "status": "approved"
+  }
+]
