@@ -32,8 +32,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
+      <body className="flex justify-center bg-neutral-100 min-h-screen">
+        {/* Mobile frame: max 430px, fills screen on real devices */}
+        <div className="w-full max-w-[430px] min-h-screen bg-white flex flex-col shadow-xl shadow-black/10 relative">
+          {children}
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -41,8 +44,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+function Header() {
+  return (
+    <header className="px-5 pt-12 pb-4 border-b border-neutral-100">
+      <span className="text-xl font-semibold tracking-tight text-neutral-900">
+        breathe.app
+      </span>
+    </header>
+  );
+}
+
 export default function App() {
-  return <Outlet />;
+  return (
+    <>
+      <Header />
+      <main className="flex-1 overflow-y-auto">
+        <Outlet />
+      </main>
+    </>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
@@ -62,14 +82,17 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
-          <code>{stack}</code>
-        </pre>
-      )}
-    </main>
+    <>
+      <Header />
+      <main className="flex-1 p-5">
+        <h1 className="text-xl font-semibold mb-2">{message}</h1>
+        <p className="text-neutral-500 text-sm">{details}</p>
+        {stack && (
+          <pre className="mt-4 text-xs bg-neutral-50 p-4 rounded-xl overflow-x-auto">
+            <code>{stack}</code>
+          </pre>
+        )}
+      </main>
+    </>
   );
 }
