@@ -11,3 +11,41 @@ A mobile-first map of smoke-free bars in Berlin.
 > - **Internal Value:** Insights gained regarding prompt engineering efficiency, codebase context management, and automated file generation will be used to optimize internal team development workflows and accelerate future production project lifecycles.
 
 ---
+
+## Features
+
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
+
+## Getting Started
+
+### Installation
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+### Development
+
+Start the development server with HMR:
+
+```bash
+npm run dev
+```
+
+Your application will be available at `http://localhost:5173`.
+
+## Building for Production
+
+Create a production build:
+
+```bash
+npm run build
+```
