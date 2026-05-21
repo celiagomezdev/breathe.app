@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+import { getVenues } from "../lib/supabase.server";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -7,10 +8,17 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
+export async function loader() {
+  const venues = await getVenues();
+  return { venues };
+}
+
+export default function Home({ loaderData }: Route.ComponentProps) {
+  const { venues } = loaderData;
+
   return (
     <div className="p-5">
-      <p className="text-neutral-400 text-sm">Berlin map coming soon.</p>
+      <p className="text-neutral-400 text-sm">{venues.length} bars loaded.</p>
     </div>
   );
 }
