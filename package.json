@@ -1,5 +1,5 @@
 {
-  "name": "breathe.app",
+  "name": "breathe-app",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,6 +13,7 @@
     "@capacitor/core": "^8.3.4",
     "@react-router/node": "7.15.1",
     "@react-router/serve": "7.15.1",
+    "@supabase/supabase-js": "^2.106.1",
     "isbot": "^5.1.36",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
