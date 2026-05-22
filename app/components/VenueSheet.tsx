@@ -1,9 +1,9 @@
 import type { Venue } from "../lib/supabase.server";
 
 const SMOKING_TYPE: Record<Venue["smokingType"], { label: string; className: string }> = {
-  nonsmo: { label: "Smoke-free", className: "bg-blue-200 text-blue-700" },
-  sepnonsmo: { label: "Non-smoking section", className: "bg-orange-200 text-orange-700" },
-  sepsmo: { label: "Smoking area", className: "bg-yellow-200 text-yellow-700" },
+  nonsmo: { label: "Smoke-free", className: "bg-nonsmo text-blue-700" },
+  sepnonsmo: { label: "Non-smoking section", className: "bg-sepnonsmo text-orange-700" },
+  sepsmo: { label: "Smoking area", className: "bg-sepsmo text-yellow-700" },
 };
 
 export default function VenueSheet({

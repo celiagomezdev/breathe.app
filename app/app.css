@@ -5,6 +5,9 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-smoke: #1a1a1a;
   --color-fresh: #e8f5e9;
+  --color-nonsmo: #93c5fd;
+  --color-sepnonsmo: #fdba74;
+  --color-sepsmo: #fde68a;
 }
 
 html,
