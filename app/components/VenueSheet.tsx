@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import type { Venue } from "../lib/supabase.server";
 
 const SMOKING_TYPE: Record<Venue["smokingType"], { label: string; className: string }> = {
@@ -13,6 +14,14 @@ export default function VenueSheet({
   venue: Venue | null;
   onClose: () => void;
 }) {
+  const handleRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (venue) {
+      handleRef.current?.focus();
+    }
+  }, [venue]);
+
   return (
     <>
       {venue && (
@@ -30,8 +39,16 @@ export default function VenueSheet({
           venue ? "translate-y-0 pointer-events-auto" : "translate-y-full pointer-events-none"
         }`}
       >
-        <div className="flex justify-center pt-3 pb-2 cursor-pointer" onClick={onClose}>
-          <div className="w-10 h-1 rounded-full bg-neutral-200" />
+        <div className="flex justify-center pt-3 pb-1">
+          <button
+            ref={handleRef}
+            className="w-full flex justify-center py-2 focus:outline-none"
+            aria-label="Close"
+            onClick={onClose}
+            onKeyDown={(e) => e.key === "Escape" && onClose()}
+          >
+            <div className="w-10 h-1 rounded-full bg-neutral-200" />
+          </button>
         </div>
         {venue && (
           <div className="px-5 pt-1 pb-10">

@@ -36,7 +36,7 @@ export default function VenueMap({
           <Marker
             key={venue.id}
             position={[venue.latitude, venue.longitude]}
-            icon={makeIcon(MARKER_COLORS[venue.smokingType])}
+            icon={MARKER_ICONS[venue.smokingType]}
             eventHandlers={{ click: () => onSelect(venue) }}
           />
         ))}
@@ -65,8 +65,8 @@ function makeIcon(color: string) {
   });
 }
 
-const MARKER_COLORS: Record<Venue["smokingType"], string> = {
-  nonsmo: "var(--color-nonsmo)",
-  sepnonsmo: "var(--color-sepnonsmo)",
-  sepsmo: "var(--color-sepsmo)",
+const MARKER_ICONS: Record<Venue["smokingType"], L.DivIcon> = {
+  nonsmo: makeIcon("var(--color-nonsmo)"),
+  sepnonsmo: makeIcon("var(--color-sepnonsmo)"),
+  sepsmo: makeIcon("var(--color-sepsmo)"),
 };
