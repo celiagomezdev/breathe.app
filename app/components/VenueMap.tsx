@@ -34,7 +34,7 @@ export default function VenueMap({
         />
         {venues.map((venue) => (
           <Marker
-            key={venue.name}
+            key={venue.id}
             position={[venue.latitude, venue.longitude]}
             icon={makeIcon(MARKER_COLORS[venue.smokingType])}
             eventHandlers={{ click: () => onSelect(venue) }}
