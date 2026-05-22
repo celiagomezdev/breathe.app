@@ -11,6 +11,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
+  { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -19,7 +20,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Varela+Round&display=swap",
   },
 ];
 
@@ -46,10 +47,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 function Header() {
   return (
-    <header className="px-5 pt-12 pb-4 border-b border-neutral-100">
-      <span className="text-xl font-semibold tracking-tight text-neutral-900">
-        breathe.app
-      </span>
+    <header className="p-3 border-b border-neutral-100">
+      <div className="flex items-center gap-1">
+        <img src="/favicon.svg" alt="" className="w-6 h-6" />
+        <span className="text-xl tracking-tight text-neutral-900" style={{ fontFamily: "'Varela Round', sans-serif" }}>
+          breathe
+</span>
+      </div>
     </header>
   );
 }
