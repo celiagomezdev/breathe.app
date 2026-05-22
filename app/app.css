@@ -8,6 +8,9 @@
   --color-nonsmo: #93c5fd;
   --color-sepnonsmo: #fdba74;
   --color-sepsmo: #fde68a;
+  --z-sheet-backdrop: 1100;
+  --z-sheet: 1200;
+  --width-mobile-frame: 390px;
 }
 
 html,

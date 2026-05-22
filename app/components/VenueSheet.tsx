@@ -17,7 +17,7 @@ export default function VenueSheet({
     <>
       {venue && (
         <div
-          className="absolute inset-0 z-1100"
+          className="absolute inset-0 z-sheet-backdrop"
           role="button"
           aria-label="Close venue details"
           tabIndex={0}
@@ -26,7 +26,7 @@ export default function VenueSheet({
         />
       )}
       <div
-        className={`absolute bottom-0 left-0 right-0 z-1200 bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-in-out ${
+        className={`absolute bottom-0 left-0 right-0 z-sheet bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-in-out ${
           venue ? "translate-y-0 pointer-events-auto" : "translate-y-full pointer-events-none"
         }`}
       >

@@ -34,8 +34,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="flex justify-center bg-neutral-100 min-h-screen">
-        {/* Mobile frame: max 430px, fills screen on real devices */}
-        <div className="w-full max-w-[430px] min-h-screen bg-white flex flex-col shadow-xl shadow-black/10 relative">
+        <div className="w-full max-w-mobile-frame min-h-screen bg-white flex flex-col shadow-xl shadow-black/10 relative">
           {children}
         </div>
         <ScrollRestoration />
