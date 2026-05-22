@@ -16,10 +16,17 @@ export default function VenueSheet({
   return (
     <>
       {venue && (
-        <div className="absolute inset-0 z-[1100]" onClick={onClose} />
+        <div
+          className="absolute inset-0 z-1100"
+          role="button"
+          aria-label="Close venue details"
+          tabIndex={0}
+          onClick={onClose}
+          onKeyDown={(e) => (e.key === "Enter" || e.key === "Escape") && onClose()}
+        />
       )}
       <div
-        className={`absolute bottom-0 left-0 right-0 z-[1200] bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-in-out ${
+        className={`absolute bottom-0 left-0 right-0 z-1200 bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-in-out ${
           venue ? "translate-y-0 pointer-events-auto" : "translate-y-full pointer-events-none"
         }`}
       >
