@@ -62,7 +62,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 flex flex-col overflow-hidden">
         <Outlet />
       </main>
     </>
