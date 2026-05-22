@@ -1,9 +1,12 @@
+import { useState } from "react";
 import type { Route } from "./+types/home";
-import { getVenues } from "../lib/supabase.server";
+import { getVenues, type Venue } from "../lib/supabase.server";
+import VenueMap from "../components/VenueMap";
+import VenueSheet from "../components/VenueSheet";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "breathe.app" },
+    { title: "breathe" },
     { name: "description", content: "Smoke-free bars in Berlin." },
   ];
 }
@@ -15,10 +18,12 @@ export async function loader() {
 
 export default function Home({ loaderData }: Route.ComponentProps) {
   const { venues } = loaderData;
+  const [selected, setSelected] = useState<Venue | null>(null);
 
   return (
-    <div className="p-5">
-      <p className="text-neutral-400 text-sm">{venues.length} bars loaded.</p>
+    <div className="flex-1 relative overflow-hidden">
+      <VenueMap venues={venues} onSelect={setSelected} />
+      <VenueSheet venue={selected} onClose={() => setSelected(null)} />
     </div>
   );
 }

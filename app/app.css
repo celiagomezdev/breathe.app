@@ -5,6 +5,12 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-smoke: #1a1a1a;
   --color-fresh: #e8f5e9;
+  --color-nonsmo: #93c5fd;
+  --color-sepnonsmo: #fdba74;
+  --color-sepsmo: #fde68a;
+  --z-sheet-backdrop: 1100;
+  --z-sheet: 1200;
+  --width-mobile-frame: 390px;
 }
 
 html,
@@ -14,4 +20,11 @@ body {
 
 #root {
   @apply h-full;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px !important;
+  opacity: 0.5;
+  background: transparent !important;
+  box-shadow: none !important;
 }
