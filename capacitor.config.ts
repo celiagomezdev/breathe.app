@@ -1,11 +1,14 @@
 import type { CapacitorConfig } from '@capacitor/cli';
+import { config as loadEnv } from 'dotenv';
+
+loadEnv({ path: '.env.local' });
 
 const { CAPACITOR_SERVER_URL } = process.env;
 
 const config: CapacitorConfig = {
-  appId: 'app.breathe',
+  appId: 'com.breatheapp.ios',
   appName: 'breathe',
-  webDir: 'build/client',
+  webDir: 'ios-shell',
   ...(CAPACITOR_SERVER_URL && { server: { url: CAPACITOR_SERVER_URL } }),
 };
 
