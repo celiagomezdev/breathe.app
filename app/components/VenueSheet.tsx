@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
-import type { Venue } from "../lib/supabase.server";
+import type { Venue } from "../helpers/supabase.server";
 
-const SMOKING_TYPE: Record<Venue["smokingType"], { label: string; className: string }> = {
+const SMOKING_TYPE: Record<Venue["smokingType"], { label: string; subLabel?: string; className: string }> = {
   nonsmo: { label: "Smoke-free", className: "bg-nonsmo text-blue-700" },
-  sepnonsmo: { label: "Non-smoking section", className: "bg-sepnonsmo text-orange-700" },
-  sepsmo: { label: "Smoking area", className: "bg-sepsmo text-yellow-700" },
+  sepnonsmo: { label: "Closed non-smoking room", subLabel: "You may need to walk through smoking areas to reach the bar or toilets.", className: "bg-sepnonsmo text-orange-700" },
+  sepsmo: { label: "Closed smoking room", subLabel: "Smoking is only allowed in a separate room, but smoke may still drift through when the door opens.", className: "bg-sepsmo text-yellow-700" },
 };
 
 export default function VenueSheet({
@@ -18,7 +18,7 @@ export default function VenueSheet({
 
   useEffect(() => {
     if (venue) {
-      handleRef.current?.focus();
+      handleRef.current?.focus({ preventScroll: true });
     }
   }, [venue]);
 
@@ -55,9 +55,16 @@ export default function VenueSheet({
             <p className="text-neutral-400 text-sm mb-0.5">{venue.neighbourhood}</p>
             <h2 className="text-xl font-semibold text-neutral-900 mb-1">{venue.name}</h2>
             <p className="text-neutral-500 text-sm mb-4">{venue.address}</p>
-            <span className={`text-xs font-medium px-3 py-1 rounded-full ${SMOKING_TYPE[venue.smokingType].className}`}>
-              {SMOKING_TYPE[venue.smokingType].label}
-            </span>
+            <div>
+              <span className={`text-xs font-medium px-3 py-1 rounded-full ${SMOKING_TYPE[venue.smokingType].className}`}>
+                {SMOKING_TYPE[venue.smokingType].label}
+              </span>
+              {SMOKING_TYPE[venue.smokingType].subLabel && (
+                <p className="text-xs text-neutral-400 mt-2">
+                  {SMOKING_TYPE[venue.smokingType].subLabel}
+                </p>
+              )}
+            </div>
           </div>
         )}
       </div>
