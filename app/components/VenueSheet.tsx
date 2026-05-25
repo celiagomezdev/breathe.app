@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import type { Venue } from "../helpers/supabase.server";
 
 const SMOKING_TYPE: Record<Venue["smokingType"], { label: string; subLabel?: string; className: string }> = {
-  nonsmo: { label: "Smoke-free", className: "bg-nonsmo text-blue-700" },
+  nonsmo: { label: "Smoke-free inside", className: "bg-nonsmo text-blue-700" },
   sepnonsmo: { label: "Closed non-smoking room", subLabel: "You may need to walk through smoking areas to reach the bar or toilets.", className: "bg-sepnonsmo text-orange-700" },
   sepsmo: { label: "Closed smoking room", subLabel: "Smoking is only allowed in a separate room, but smoke may still drift through when the door opens.", className: "bg-sepsmo text-yellow-700" },
 };
@@ -65,6 +65,8 @@ export default function VenueSheet({
                 </p>
               )}
             </div>
+            <hr className="my-4 border-neutral-100" />
+            <p className="text-xs text-neutral-400">Something incorrect? <a href="mailto:hello@breathe-app.com" className="underline">Let us know!</a></p>
           </div>
         )}
       </div>
