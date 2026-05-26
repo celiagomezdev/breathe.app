@@ -1,12 +1,12 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
+const { CAPACITOR_SERVER_URL } = process.env;
+
 const config: CapacitorConfig = {
   appId: 'app.breathe',
   appName: 'breathe',
   webDir: 'build/client',
-  server: {
-    url: 'https://breathe-app-alpha.vercel.app',
-  },
+  ...(CAPACITOR_SERVER_URL && { server: { url: CAPACITOR_SERVER_URL } }),
 };
 
 export default config;

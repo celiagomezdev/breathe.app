@@ -4,14 +4,15 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
+    "build:ios": "npm run build && npx cap sync ios",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@capacitor/cli": "^8.3.4",
-    "@capacitor/core": "^8.3.4",
-    "@capacitor/ios": "^8.3.4",
+    "@capacitor/cli": "8.3.4",
+    "@capacitor/core": "8.3.4",
+    "@capacitor/ios": "8.3.4",
     "@react-router/node": "7.15.1",
     "@react-router/serve": "7.15.1",
     "@supabase/supabase-js": "^2.106.1",
