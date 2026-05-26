@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { env } from "./env.server";
 
 export type Venue = {
   id: string;
@@ -13,13 +14,7 @@ export type Venue = {
 };
 
 export async function getVenues(): Promise<Venue[]> {
-  const { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } = process.env;
-
-  if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
-    throw new Error("SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY must be set");
-  }
-
-  const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+  const supabase = createClient(env.supabaseUrl, env.supabasePublishableKey);
 
   const { data, error } = await supabase
     .from("venues")

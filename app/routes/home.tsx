@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Route } from "./+types/home";
-import { getVenues, type Venue } from "../lib/supabase.server";
+import { getVenues, type Venue } from "../helpers/supabase.server";
 import VenueMap from "../components/VenueMap";
 import VenueSheet from "../components/VenueSheet";
 
@@ -12,8 +12,13 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export async function loader() {
-  const venues = await getVenues();
-  return { venues };
+  try {
+    const venues = await getVenues();
+    return { venues };
+  } catch (err) {
+    console.error("[home] Failed to load venues:", err);
+    throw err;
+  }
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
