@@ -51,7 +51,7 @@ export default function VenueSheet({
           </button>
         </div>
         {venue && (
-          <div className="px-5 pt-1 pb-10">
+          <div className="px-5 pt-1" style={{ paddingBottom: "max(env(safe-area-inset-bottom), 2.5rem)" }}>
             <p className="text-neutral-400 text-sm mb-0.5">{venue.neighbourhood}</p>
             <h2 className="text-xl font-semibold text-neutral-900 mb-1">{venue.name}</h2>
             <p className="text-neutral-500 text-sm mb-4">{venue.address}</p>

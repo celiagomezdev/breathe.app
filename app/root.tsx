@@ -29,7 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <Meta />
         <Links />
       </head>
@@ -46,7 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 function Header() {
   return (
-    <header className="p-3 border-b border-neutral-100">
+    <header className="px-3 pb-3 border-b border-neutral-100" style={{ paddingTop: "calc(env(safe-area-inset-top) + 0.75rem)" }}>
       <div className="flex items-center gap-1">
         <img src="/favicon.svg" alt="" className="w-6 h-6" />
         <span className="text-xl tracking-tight text-neutral-900" style={{ fontFamily: "'Varela Round', sans-serif" }}>
