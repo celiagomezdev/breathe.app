@@ -23,7 +23,6 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${SIZE}" height="${S
     stroke="#171717" stroke-width="${c.stroke.toFixed(2)}" fill="none"
     stroke-dasharray="${c.dash.toFixed(2)} ${c.opening.toFixed(2)}"
     stroke-dashoffset="${c.offset.toFixed(2)}"
-    stroke-linecap="round"
   />
   <text
     x="${l.textX.toFixed(2)}" y="${l.cy.toFixed(2)}"

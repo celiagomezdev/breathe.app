@@ -33,8 +33,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="flex justify-center bg-neutral-100 min-h-screen">
-        <div className="w-full max-w-mobile-frame min-h-screen bg-white flex flex-col shadow-xl shadow-black/10 relative">
+      <body className="flex justify-center bg-neutral-100 h-full">
+        <div className="w-full max-w-mobile-frame h-full bg-white flex flex-col shadow-xl shadow-black/10 relative">
           {children}
         </div>
         <ScrollRestoration />
@@ -47,9 +47,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 function Header() {
   return (
     <header className="px-3 pb-3 border-b border-neutral-100" style={{ paddingTop: "calc(env(safe-area-inset-top) + 0.75rem)" }}>
-      <div className="flex items-center gap-1">
+      <div className="flex items-center justify-center gap-1">
         <img src="/favicon.svg" alt="" className="w-6 h-6" />
-        <span className="text-xl tracking-tight text-neutral-900" style={{ fontFamily: "'Varela Round', sans-serif" }}>
+        <span className="text-xl leading-none tracking-tight text-neutral-900" style={{ fontFamily: "'Varela Round', sans-serif" }}>
           breathe
 </span>
       </div>
