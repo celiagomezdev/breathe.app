@@ -7,6 +7,8 @@ const SMOKING_TYPE: Record<Venue["smokingType"], { label: string; subLabel?: str
   sepsmo: { label: "Closed smoking room", subLabel: "Smoking is only allowed in a separate room, but smoke may still drift through when the door opens.", className: "bg-sepsmo text-yellow-700" },
 };
 
+const CLOSE_THRESHOLD = 120;
+
 export default function VenueSheet({
   venue,
   onClose,
@@ -15,12 +17,66 @@ export default function VenueSheet({
   onClose: () => void;
 }) {
   const handleRef = useRef<HTMLButtonElement>(null);
+  const sheetRef = useRef<HTMLDivElement>(null);
+  const dragStartY = useRef<number | null>(null);
 
   useEffect(() => {
     if (venue) {
       handleRef.current?.focus({ preventScroll: true });
     }
   }, [venue]);
+
+  function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
+    if (!venue) return;
+    dragStartY.current = e.clientY;
+    const el = sheetRef.current;
+    if (el) el.style.transition = "none";
+    e.currentTarget.setPointerCapture(e.pointerId);
+  }
+
+  function onPointerMove(e: React.PointerEvent<HTMLDivElement>) {
+    if (dragStartY.current === null) return;
+    const delta = Math.max(0, e.clientY - dragStartY.current);
+    const el = sheetRef.current;
+    if (el) el.style.transform = `translateY(${delta}px)`;
+  }
+
+  function onPointerUp(e: React.PointerEvent<HTMLDivElement>) {
+    if (dragStartY.current === null) return;
+    const delta = Math.max(0, e.clientY - dragStartY.current);
+    dragStartY.current = null;
+    const el = sheetRef.current;
+    if (!el) return;
+
+    if (delta > CLOSE_THRESHOLD) {
+      el.style.transition = "transform 250ms ease-in";
+      el.style.transform = "translateY(100%)";
+      const done = () => {
+        el.removeEventListener("transitionend", done);
+        onClose();
+        requestAnimationFrame(() => {
+          el.style.transition = "";
+          el.style.transform = "";
+        });
+      };
+      el.addEventListener("transitionend", done);
+    } else {
+      // Snap back: force a reflow so the browser sees the current
+      // position before re-enabling the CSS transition, then clear
+      // the inline transform so translate-y-0 animates it home.
+      el.style.transition = "";
+      void el.offsetHeight;
+      el.style.transform = "";
+    }
+  }
+
+  function onPointerCancel() {
+    dragStartY.current = null;
+    const el = sheetRef.current;
+    if (!el) return;
+    el.style.transition = "";
+    el.style.transform = "";
+  }
 
   return (
     <>
@@ -35,14 +91,19 @@ export default function VenueSheet({
         />
       )}
       <div
-        className={`fixed bottom-0 left-0 right-0 max-w-mobile-frame mx-auto z-sheet bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-in-out ${
+        ref={sheetRef}
+        className={`fixed bottom-0 left-0 right-0 max-w-mobile-frame mx-auto z-sheet bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-in-out touch-none ${
           venue ? "translate-y-0 pointer-events-auto" : "translate-y-full pointer-events-none"
         }`}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerCancel}
       >
         <div className="flex justify-center pt-3 pb-1">
           <button
             ref={handleRef}
-            className="w-full flex justify-center py-2 focus:outline-none"
+            className="w-full flex justify-center py-2 focus:outline-none cursor-grab active:cursor-grabbing"
             aria-label="Close"
             onClick={onClose}
             onKeyDown={(e) => e.key === "Escape" && onClose()}
