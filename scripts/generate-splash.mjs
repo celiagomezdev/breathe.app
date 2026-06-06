@@ -17,10 +17,10 @@ const c = makeCircleProps(ICON_BOX);
 const l = makeLockupLayout(ICON_BOX, SIZE, SIZE, TEXT_W_EST);
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${SIZE}" height="${SIZE}" viewBox="0 0 ${SIZE} ${SIZE}">
-  <rect width="${SIZE}" height="${SIZE}" fill="white"/>
+  <rect width="${SIZE}" height="${SIZE}" fill="#93c5fd"/>
   <circle
     cx="${l.cx.toFixed(2)}" cy="${l.cy.toFixed(2)}" r="${c.r.toFixed(2)}"
-    stroke="#171717" stroke-width="${c.stroke.toFixed(2)}" fill="none"
+    stroke="white" stroke-width="${c.stroke.toFixed(2)}" fill="none"
     stroke-dasharray="${c.dash.toFixed(2)} ${c.opening.toFixed(2)}"
     stroke-dashoffset="${c.offset.toFixed(2)}"
   />
@@ -30,7 +30,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${SIZE}" height="${S
     font-family="Varela Round, sans-serif"
     font-size="${l.fontSize.toFixed(2)}"
     letter-spacing="${l.letterSpacing.toFixed(2)}"
-    fill="#171717"
+    fill="white"
   >breathe</text>
 </svg>`;
 
