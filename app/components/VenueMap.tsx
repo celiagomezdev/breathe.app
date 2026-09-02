@@ -5,7 +5,9 @@ import type { Map as LeafletMap } from "leaflet";
 import type { Venue } from "../helpers/supabase.server";
 
 const BERLIN: [number, number] = [52.52, 13.405];
-const TILE_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+
+const CARTO_API_KEY = import.meta.env.VITE_CARTO_API_KEY as string | undefined;
+const TILE_URL = `https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png?key=${CARTO_API_KEY}`;
 const ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
 
@@ -16,6 +18,10 @@ export default function VenueMap({
   venues: Venue[];
   onSelect: (v: Venue) => void;
 }) {
+  if (!CARTO_API_KEY) {
+    throw new Error("Missing VITE_CARTO_API_KEY environment variable");
+  }
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -43,7 +49,9 @@ function createMap(
 ): LeafletMap {
   const map = leaflet.map(el, { center: BERLIN, zoom: 12, zoomControl: false, scrollWheelZoom: true });
 
-  leaflet.tileLayer(TILE_URL, { attribution: ATTRIBUTION }).addTo(map);
+  leaflet
+    .tileLayer(TILE_URL, { attribution: ATTRIBUTION, subdomains: "abcd", maxZoom: 20 })
+    .addTo(map);
   map.attributionControl.setPrefix("");
   map.invalidateSize();
 
