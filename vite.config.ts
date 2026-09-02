@@ -8,6 +8,9 @@ export default defineConfig({
     dedupe: ["react", "react-dom"],
     tsconfigPaths: true,
   },
+  optimizeDeps: {
+    exclude: ["maplibre-gl"],
+  },
   server: {
     port: 5180,
     strictPort: true,

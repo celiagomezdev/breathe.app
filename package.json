@@ -17,7 +17,7 @@
     "@react-router/serve": "7.15.1",
     "@supabase/supabase-js": "^2.106.1",
     "isbot": "^5.1.36",
-    "leaflet": "^1.9.4",
+    "maplibre-gl": "^6.6.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router": "7.15.1"
@@ -26,7 +26,6 @@
     "@react-router/dev": "7.15.1",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.2.2",
-    "@types/leaflet": "^1.9.21",
     "@types/node": "^22",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
