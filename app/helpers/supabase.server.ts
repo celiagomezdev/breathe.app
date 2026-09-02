@@ -23,7 +23,13 @@ export async function getVenues(): Promise<Venue[]> {
     .order("name");
 
   if (error) {
-    throw new Error(`Failed to fetch venues: ${error.message}`);
+    const isHtml = error.message.trim().startsWith("<");
+    console.error("[getVenues] Supabase error:", error.message);
+    throw new Error(
+      isHtml
+        ? "Failed to fetch venues: the database service is unreachable."
+        : `Failed to fetch venues: ${error.message}`,
+    );
   }
 
   return data.map((venue) => ({
