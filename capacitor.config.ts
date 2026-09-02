@@ -9,6 +9,7 @@ const config: CapacitorConfig = {
   appId: 'com.breatheapp.ios',
   appName: 'breathe',
   webDir: 'ios-shell',
+  backgroundColor: '#93c5fd',
   ...(CAPACITOR_SERVER_URL && { server: { url: CAPACITOR_SERVER_URL } }),
 };
 
