@@ -1,13 +1,16 @@
-import "leaflet/dist/leaflet.css";
+import "maplibre-gl/dist/maplibre-gl.css";
 import { useEffect, useRef } from "react";
-import type LeafletLib from "leaflet";
-import type { Map as LeafletMap } from "leaflet";
+import type { Map as MaplibreMap } from "maplibre-gl";
 import type { Venue } from "../helpers/supabase.server";
 
-const BERLIN: [number, number] = [52.52, 13.405];
-const TILE_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-const ATTRIBUTION =
-  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+const BERLIN: [number, number] = [13.405, 52.52];
+const STYLE_URL = "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json";
+
+const MARKER_COLORS: Record<Venue["smokingType"], string> = {
+  nonsmo: "var(--color-nonsmo)",
+  sepnonsmo: "var(--color-sepnonsmo)",
+  sepsmo: "var(--color-sepsmo)",
+};
 
 export default function VenueMap({
   venues,
@@ -24,8 +27,8 @@ export default function VenueMap({
 
     let cleanup: (() => void) | undefined;
 
-    import("leaflet").then(({ default: leaflet }) => {
-      const map = createMap(leaflet, el, venues, onSelect);
+    import("maplibre-gl").then((maplibregl) => {
+      const map = createMap(maplibregl, el, venues, onSelect);
       cleanup = () => map.remove();
     });
 
@@ -36,39 +39,29 @@ export default function VenueMap({
 }
 
 function createMap(
-  leaflet: typeof LeafletLib,
+  maplibregl: typeof import("maplibre-gl"),
   el: HTMLDivElement,
   venues: Venue[],
   onSelect: (v: Venue) => void,
-): LeafletMap {
-  const map = leaflet.map(el, { center: BERLIN, zoom: 12, zoomControl: false, scrollWheelZoom: true });
-
-  leaflet.tileLayer(TILE_URL, { attribution: ATTRIBUTION }).addTo(map);
-  map.attributionControl.setPrefix("");
-  map.invalidateSize();
-
-  const icons = {
-    nonsmo: makeIcon(leaflet, "var(--color-nonsmo)"),
-    sepnonsmo: makeIcon(leaflet, "var(--color-sepnonsmo)"),
-    sepsmo: makeIcon(leaflet, "var(--color-sepsmo)"),
-  };
+): MaplibreMap {
+  const map = new maplibregl.Map({ container: el, style: STYLE_URL, center: BERLIN, zoom: 12 });
 
   venues.forEach((venue) => {
-    leaflet.marker([venue.latitude, venue.longitude], { icon: icons[venue.smokingType] })
-      .on("click", () => onSelect(venue))
+    const markerEl = makeMarkerEl(MARKER_COLORS[venue.smokingType]);
+    markerEl.addEventListener("click", () => onSelect(venue));
+    new maplibregl.Marker({ element: markerEl, anchor: "center" })
+      .setLngLat([venue.longitude, venue.latitude])
       .addTo(map);
   });
 
   return map;
 }
 
-function makeIcon(leaflet: typeof LeafletLib, color: string) {
-  return leaflet.divIcon({
-    className: "",
-    html: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-      <circle cx="9" cy="9" r="7" fill="${color}" stroke="white" stroke-width="2.5"/>
-    </svg>`,
-    iconSize: [18, 18],
-    iconAnchor: [9, 9],
-  });
+function makeMarkerEl(color: string): HTMLElement {
+  const el = document.createElement("div");
+  el.style.cursor = "pointer";
+  el.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <circle cx="9" cy="9" r="7" fill="${color}" stroke="white" stroke-width="2.5"/>
+  </svg>`;
+  return el;
 }
